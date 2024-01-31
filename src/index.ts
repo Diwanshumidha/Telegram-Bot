@@ -28,7 +28,18 @@ bot.use(async (ctx, next) => {
 
 bot.start((ctx) => {
   const Name = ctx.from?.first_name || "User";
-  const welcomeMessage = `Hello, ${Name}! \nWelcome to your Chatgpt Bot. How can I assist you today?`;
+  const welcomeMessage = `Hello, ${Name}! \nWelcome to your Chatgpt Bot. How can I assist you today?\n
+🤖 ChatGPT Bot Commands:
+
+- /start: Start a conversation with the bot.
+- /about: Learn more about the bot.
+- /joke [topic] : Generate a Joke.
+- /quote [topic] : Generate a Quote.
+- /help: Display this help message.
+
+For any other messages, the bot will generate responses based on the input.
+
+Feel free to explore and ask questions! 🚀 `;
   ctx.reply(welcomeMessage);
 });
 
